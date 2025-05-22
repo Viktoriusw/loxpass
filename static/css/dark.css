@@ -1,0 +1,299 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el navbar extendido */
+.navbar {
+    width: 100%;
+    background-color: #1c1c1c; /* Fondo oscuro para el navbar */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Ajuste de elementos dentro del navbar */
+.navbar-left h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.navbar-right .button {
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.navbar-right .button:hover {
+    background-color: #e64a19;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 15%;
+    background: #1c1c1c;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 9px;
+    box-shadow: 5px 5px 15px #000, 
+                -5px -5px 15px #333;
+}
+
+/* Espacios adicionales de publicidad */
+.ad-space {
+    width: 10%;
+    margin: 0 10px;
+    background: #1c1c1c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 9px;
+    box-shadow: 5px 5px 15px #000, 
+                -5px -5px 15px #333;
+}
+
+/* Content */
+.content {
+    width: 50%;
+    padding: 50px;
+    background: #2c2c2c; /* Fondo oscuro para el contenido */
+    border-radius: 9px;
+    box-shadow: 10px 10px 20px #000, 
+                -10px -10px 20px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 12px;
+    background: #333333;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 3px 3px 5px #666, 
+                inset -3px -3px 5px #000;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 3px 3px 10px #888, 
+                -3px -3px 10px #000;
+}
+
+/* Opciones de caracteres con toggles */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.toggle-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Ocultar checkbox original */
+.toggle-input {
+    display: none;
+}
+
+/* Contenedor principal de los toggles */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo del label para el toggle */
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    user-select: none;
+}
+
+/* Estilo del toggle switch */
+.toggle-switch {
+    width: 40px;
+    height: 20px;
+    background-color: #65b74e;
+    border-radius: 50px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+/* El círculo dentro del toggle */
+.toggle-switch::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+}
+
+/* Cambiar el color del toggle cuando esté activado */
+.toggle-input:checked + .toggle-label .toggle-switch {
+    background-color: #232327;
+}
+
+.toggle-input:checked + .toggle-label .toggle-switch::before {
+    transform: translateX(20px);
+}
+
+/* Texto junto al toggle */
+.toggle-text {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: #1c1c1c;
+    color: #e0e0e0;
+    padding: 20px 0;
+    box-shadow: 5px 5px 15px #000, 
+                -5px -5px 15px #333;
+    border-radius: 12px;
+}
+
+.footer-section {
+    width: 30%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Botones generales */
+.button {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #333333;
+    color: #e0e0e0;
+    border-radius: 9px;
+    font-size: 1rem;
+    cursor: pointer;
+    
+    border-top-style: solid;
+    border-top-width: 0px;
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-style: solid;
+    border-right-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    box-shadow: 5px 5px 15px #000, 
+                -5px -5px 15px #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 10px #666, 
+                -3px -3px 10px #000;
+}
+
+.button:active {
+    box-shadow: inset 5px 5px 15px #666, 
+                inset -5px -5px 15px #000;
+}
+
+/* Contenedor de la barra de carga */
+.loading-container {
+    display: none;
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Barra de carga animada */
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    animation: loading 2s infinite;
+}
+
+/* Animación de la barra */
+@keyframes loading {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #4caf50, #8bc34a);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+/* Estilo del thumb del slider */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

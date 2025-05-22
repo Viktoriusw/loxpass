@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOXPASS Generator</title>
+    <link id="theme-style" rel="stylesheet" href="/static/css/light.css">
+    <script src="/static/js/script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h1>LOXPASS GENERATOR</h1>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <div class="content">
+            <h2>IMPOSSIBLE Password Generator</h2>
+            <input id="password" type="text" readonly value="Select options and move the control to generate.">
+
+            <!-- Configuración de longitud -->
+            <div class="length-container">
+                <label for="length">Password length: </label>
+                <input 
+                    type="range" 
+                    id="length" 
+                    min="4" 
+                    max="10000000" 
+                    value="12" 
+                    step="1" 
+                    oninput="updateLength(this.value)"
+                    aria-label="Password length">
+                <span id="length-value">12</span>
+            </div>
+
+            <!-- Opciones de caracteres -->
+            <div class="options-container">
+                <div class="toggle-wrapper">
+                    <input type="checkbox" id="numbers" class="toggle-input">
+                    <label for="numbers" class="toggle-label">
+                        <span class="toggle-switch"></span>
+                        <span class="toggle-text">NUMBERS</span>
+                    </label>
+                </div>
+                <div class="toggle-wrapper">
+                    <input type="checkbox" id="uppercase" class="toggle-input">
+                    <label for="uppercase" class="toggle-label">
+                        <span class="toggle-switch"></span>
+                        <span class="toggle-text">UPPERCASE</span>
+                    </label>
+                </div>
+                <div class="toggle-wrapper">
+                    <input type="checkbox" id="lowercase" class="toggle-input">
+                    <label for="lowercase" class="toggle-label">
+                        <span class="toggle-switch"></span>
+                        <span class="toggle-text">LOWERCASE</span>
+                    </label>
+                </div>
+                <div class="toggle-wrapper">
+                    <input type="checkbox" id="special" class="toggle-input">
+                    <label for="special" class="toggle-label">
+                        <span class="toggle-switch"></span>
+                        <span class="toggle-text">SPECIAL</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="button-container">
+                <button id="generate-password-button" class="button">Generate Password</button>
+                <button id="copy-to-clipboard" class="button">Copy to Clipboard</button>
+                <button id="toggle-theme" class="button">Change Theme</button>
+                <button class="button" onclick="window.location.href='https://paypal.me/vicrosman?country.x=ES&locale.x=es_ES'">Donation</button>
+            </div>
+
+            <!-- Título y contraseñas adicionales -->
+            <div class="additional-passwords">
+                <h3 id="additional-password-title">15 CHAR Password</h3>
+                <div id="password-display-container" class="password-display-container">
+                    <!-- Contraseñas alternativas generadas aparecerán aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading-container" class="loading-container" style="display: none;">
+        <div id="loading-bar" class="loading-bar"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <p>Someone call someone, please! it's urgent.</p>
+        </div>
+        <div class="footer-section">
+            <p>Loxpass is like a stick that you find in the field and becomes an indispensable tool.</p>
+        </div>
+        <div class="footer-section">
+            <p>Please, feed me! I'm hungry.</p>
+        </div>
+        <div class="footer-section">
+            <p>Written and maintained by Victor Rosuero.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
